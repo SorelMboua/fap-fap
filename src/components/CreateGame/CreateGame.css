@@ -1,0 +1,74 @@
+.CreateGame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.CreateGame h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.FormGroup {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.FormGroup label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.FormGroup input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.GameButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.CancelButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.GameButton:hover {
+  background-color: #45a049;
+}
+
+.CancelButton:hover {
+  background-color: #d32f2f;
+}
