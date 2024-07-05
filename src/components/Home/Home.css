@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Home {
+  text-align: center;
+}
+
+.Header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+}
+
+.NavBar {
+  background-color: #333;
+}
+
+.NavBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.NavBar ul li {
+  display: inline;
+}
+
+.NavBar ul li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.NavBar ul li a:hover {
+  background-color: #111;
+}
+
+.MainContent {
+  padding: 20px;
+}
+
+.MainContent img.MainImage {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.ButtonContainer {
+  margin-top: 20px;
+}
+
+.GameButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.GameButton:hover {
+  background-color: #45a049;
+}
+
+.Footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
