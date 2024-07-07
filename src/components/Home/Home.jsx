@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import cardsHomepage from '../../assets/cards-homepage2.jpg';
 import './Home.css';
 
@@ -21,8 +22,8 @@ const Home = () => {
                     <p>Get ready to play an exciting card game with friends and family.</p>
                     <img src={cardsHomepage} alt="Cards and money on a table" className="MainImage" />
                     <div className="ButtonContainer">
-                        <button className="Create GameButton ">Create New Game</button>
-                        <button className="Join GameButton">Join Game</button>
+                        <Link to="/create-game" className="CreateButton">Create New Game</Link>
+                        <Link to="/join-game" className="JoinButton">Join Game</Link>
                     </div>
                 </main>
                 <footer className="Footer">
