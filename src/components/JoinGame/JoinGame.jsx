@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './JoinGame.css';
 
-const JoinGame = ({ onCancel }) => {
+const JoinGame = () => {
+    const [gameId, setGameId] = useState('');
     const [username, setUsername] = useState('');
     const betAmount = 50; // Example bet amount, in a real app this would come from props or state
+    const navigate = useNavigate();
 
     const handleJoinGame = () => {
-        // Handle joining game logic here
-        console.log('Joined Game:', { username, betAmount });
+        // Handle game joining logic here
+        console.log('Game Joined:', { username, betAmount });
+        navigate('/waiting-room');
     };
 
     return (
@@ -19,6 +23,15 @@ const JoinGame = ({ onCancel }) => {
                 <div className="JoinGameContent">
                     <h2>Join a Game</h2>
                     <form>
+                        <div className="FormGroup">
+                            <label htmlFor="username">Game Id:</label>
+                            <input
+                                type="text"
+                                id="gameId"
+                                value={gameId}
+                                onChange={(e) => setGameId(e.target.value)}
+                            />
+                        </div>
                         <div className="FormGroup">
                             <label htmlFor="username">Username:</label>
                             <input
@@ -41,7 +54,7 @@ const JoinGame = ({ onCancel }) => {
                             <button type="button" className="GameButton" onClick={handleJoinGame}>
                                 Join Game
                             </button>
-                            <button type="button" className="CancelButton" onClick={onCancel}>
+                            <button type="button" className="CancelButton" onClick={() => navigate('/')}>
                                 Cancel
                             </button>
                         </div>

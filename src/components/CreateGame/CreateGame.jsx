@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './CreateGame.css';
 
-const CreateGame = ({ onCancel }) => {
+const CreateGame = () => {
     const [username, setUsername] = useState('');
     const [betAmount, setBetAmount] = useState('');
+    const navigate = useNavigate();
 
     const handleCreateGame = () => {
         // Handle game creation logic here
         console.log('Game Created:', { username, betAmount });
+        navigate('/waiting-room');
     };
 
     return (
@@ -40,7 +43,7 @@ const CreateGame = ({ onCancel }) => {
                         <button type="button" className="GameButton" onClick={handleCreateGame}>
                             Create Game
                         </button>
-                        <button type="button" className="CancelButton" onClick={onCancel}>
+                        <button type="button" className="CancelButton" onClick={() => navigate('/')}>
                             Cancel
                         </button>
                     </div>

@@ -1,7 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './WaitingRoom.css';
 
 const WaitingRoom = ({ gameId = '123456', betAmount = 15, players = ['sorel', 'maeva'] }) => {
+    const navigate = useNavigate();
+
+    const handleStartGame = () => {
+        // Handle game creation logic here
+        console.log('Game started:', { gameId });
+        alert('game under construction');
+    };
+
+    const handleCancelGame = () => {
+        // Handle game creation logic here
+        console.log('Game canceled:');
+        alert('you will be removed from the game');
+        navigate('/');
+    };
 
     return (
         <div>
@@ -20,8 +35,8 @@ const WaitingRoom = ({ gameId = '123456', betAmount = 15, players = ['sorel', 'm
                         ))}
                     </ul>
                     <div className="ButtonContainer">
-                        <button className="GameButton">Start Game</button>
-                        <button className="CancelButton">Cancel</button>
+                        <button className="GameButton" onClick={handleStartGame}>Start Game</button>
+                        <button className="CancelButton" onClick={handleCancelGame}>Cancel</button>
                     </div>
                 </div>
             </div>
