@@ -4,7 +4,7 @@ import './Home.css';
 
 const Home = () => {
     return (
-        <div className="Home">
+        <div>
             <header className="Header">
                 <h1>Fap-Fap</h1>
             </header>
@@ -15,18 +15,20 @@ const Home = () => {
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <main className="MainContent">
-                <h2>Welcome to fap-fap! The card game for real bettors</h2>
-                <p>Get ready to play an exciting card game with friends and family.</p>
-                <img src={cardsHomepage} alt="Cards and money on a table" className="MainImage" />
-                <div className="ButtonContainer">
-                    <button className="Create GameButton ">Create New Game</button>
-                    <button className="Join GameButton">Join Game</button>
-                </div>
-            </main>
-            <footer className="Footer">
-                <p>&copy; 2024 Fap-Fap. All rights reserved.</p>
-            </footer>
+            <div className="Home">
+                <main className="MainContent">
+                    <h2>Welcome to fap-fap! The card game for real bettors</h2>
+                    <p>Get ready to play an exciting card game with friends and family.</p>
+                    <img src={cardsHomepage} alt="Cards and money on a table" className="MainImage" />
+                    <div className="ButtonContainer">
+                        <button className="Create GameButton ">Create New Game</button>
+                        <button className="Join GameButton">Join Game</button>
+                    </div>
+                </main>
+                <footer className="Footer">
+                    <p>&copy; 2024 Fap-Fap. All rights reserved.</p>
+                </footer>
+            </div>
         </div>
     );
 };

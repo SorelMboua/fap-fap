@@ -6,6 +6,12 @@ body {
 
 .Home {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  min-height: 100vh;
 }
 
 .Header {
@@ -15,7 +21,7 @@ body {
 }
 
 .NavBar {
-  background-color: #333;
+  background-color: #4d4b4b;
 }
 
 .NavBar ul {
